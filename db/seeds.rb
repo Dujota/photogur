@@ -9,9 +9,9 @@
 # Again, all we've done is write some instructions about how to create three pictures, but they won't be added to our database until we run the code in this file. We can run the file with the following command: $ rails db:seed
 
 Picture.create(
-  title:  'Sea Power',
-  artist: 'Stephen Scullion',
-  url:    'http://bitmakerlabs.s3.amazonaws.com/photogur/wave.jpg'
+  title:  'The old church on the coast of White sea',
+  artist: 'Sergey Ershov',
+  url:    'http://bitmakerlabs.s3.amazonaws.com/photogur/house.jpg'
 )
 
 Picture.create(
