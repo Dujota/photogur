@@ -1,6 +1,6 @@
 <h1>Picutres</h1>
 
 <% @pictures.each do |picture|%>
-  <p><%=picture.title %> by <%=picture.artist%></p>
+  <p>ID: <%=picture.id%> <%=picture.title %> by <%=picture.artist%></p>
   <img src="<%=picture.url%>" alt="<%= picture.title%>">
 <%end%>
