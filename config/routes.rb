@@ -13,9 +13,11 @@ Rails.application.routes.draw do
   post 'pictures' => 'pictures#create'
   get 'pictures/new' => 'pictures#new'
 
-  # -------- PATCH ROUTES ------------
+  # -------- PATCH REQUESTS ROUTES ------------
   get 'pictures/:id/edit' => "pictures#edit"
   patch 'pictures/:id' => "pictures#update"
+
+  # -------- DELETE REQUESTS ROUTES ------------
 
   # -------- DYNAMIC ROUTES ------------
   # order matters!!!! the new & create are required first
