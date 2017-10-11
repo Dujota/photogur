@@ -1,0 +1,29 @@
+<h1>Add a Picture</h1>
+
+<!-- Rails provides us with a bunch of methods called "form helpers" to generate the right HTML code for forms, so that we don't have to write it all ourselves -->
+
+<%= form_for(@picture) do |f| %>
+
+  <p>
+    <%= f.label :artist %>
+    <br>
+    <%= f.text_field :artist %>
+  </p>
+
+  <p>
+    <%= f.label :title %>
+    <br>
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.label :url %>
+    <br>
+    <%= f.text_field :url %>
+  </p>
+
+  <p>
+    <%= f.submit "Save" %>
+  </p>
+
+<%end%>

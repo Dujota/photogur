@@ -2,6 +2,5 @@
 
 # Here we're specifying the name of the model (Picture) and its attributes (title, artist, url, all of which are strings).
 
-class Picture < ApplicationRecord
-  
+class Picture < ApplicationRecord  
 end
