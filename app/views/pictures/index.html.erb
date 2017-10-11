@@ -1,6 +1,8 @@
 <h1>Picutres</h1>
+<%= link_to("New Picture", "/pictures/new") %>
 
 <% @pictures.each do |picture|%>
   <p>ID: <%=picture.id%> <%=picture.title %> by <%=picture.artist%></p>
-  <img src="<%=picture.url%>" alt="<%= picture.title%>">
+  <!-- image_tag is another view helper provided to us by Rails. This one generates <img> tags, and accepts one argument which will become the src -->
+  <%=image_tag(picture.url)%>>
 <%end%>
