@@ -8,10 +8,14 @@ Rails.application.routes.draw do
   get 'pictures' => 'pictures#index'
   # looks for idex in pictures folder of views when /pictures is called by the get request.
 
+  # --------POST REQUESTS -----------
   # we want now is an ability to create new pictures by filling out a form
   post 'pictures' => 'pictures#create'
   get 'pictures/new' => 'pictures#new'
 
+  # -------- PATCH ROUTES ------------
+  get 'pictures/:id/edit' => "pictures#edit"
+  patch 'pictures/:id' => "pictures#update"
 
   # -------- DYNAMIC ROUTES ------------
   # order matters!!!! the new & create are required first

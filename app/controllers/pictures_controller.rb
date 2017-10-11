@@ -11,8 +11,6 @@ class PicturesController < ApplicationController
 
 
   # ----------- Create/New call methods-----------------
-
-
   # It's the responsibility of the new method to set up instance variables that will be used in the view. In this case we aren't retrieving anything from the database. Instead we're making a brand new instance of the Picture model that will help us set up a form in our view.
   def new
     @picture = Picture.new
@@ -33,6 +31,26 @@ class PicturesController < ApplicationController
       render :new
      end
   end
+
+  # -----------UPDATE PICTURES METHOD --------------
+  def edit
+    @picture = Picture.find(params[:id])
+  end
+
+  def update
+    @picture = Picture.find(params[:id])
+
+    @picture.title = params[:picture][:title]
+    @picture.artist = params[:picture][:artist]
+    @picture.url = params[:picture][:url]
+
+    if @picture.save
+      redirect_to "/pictures/#{@picture.id}"
+    else
+      render :edit
+    end
+  end
+
 end
 
 # Running the following command will tell Rails to create this controller class and put it in the right place: rails generate controller pictures
