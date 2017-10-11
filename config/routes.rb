@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   patch 'pictures/:id' => "pictures#update"
 
   # -------- DELETE REQUESTS ROUTES ------------
+  delete 'pictures/:id' => 'pictures#destroy'
 
   # -------- DYNAMIC ROUTES ------------
   # order matters!!!! the new & create are required first
